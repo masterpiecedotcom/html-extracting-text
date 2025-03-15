@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extract Text from HTML</title>
+</head>
+<body>
+    <!-- Your HTML content -->
+    <div id="content">
+        <li class="result-list-item"><button type="button" class="w-full h-full cursor-pointer" aria-pressed="false"><div class="sc-aXZVg hisnpF"><button type="button" class="spec-weakness-suggestion" aria-pressed="false">LLM10: Model Theft</button></div></button></li></ul></div>
+    </div>
+
+    <!-- JavaScript to extract text -->
+    <script>
+        // Function to extract text from an HTML element
+        function extractTextFromElement(element) {
+            return element.textContent || element.innerText;
+        }
+
+        // Get the element containing the HTML content
+        const contentElement = document.getElementById('content');
+
+        // Extract the text
+        const extractedText = extractTextFromElement(contentElement);
+
+        // Log the extracted text to the console
+        console.log(extractedText);
+
+        // Optionally, display the extracted text on the page
+        document.body.innerHTML += `<p><strong>Extracted Text:</strong> ${extractedText}</p>`;
+    </script>
+</body>
+</html>
